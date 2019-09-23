@@ -8,7 +8,6 @@
 ##Tumblr Part 1
 
 ## User Stories
-`TODO://` In the **User Stories section below**, add an `x` in the `-[ ]` like this `- [x]` for any user story you complete. (🚫 Remove this paragraph after after checking off completed user stories)
 
 The following **required** user stories are complete:
 
@@ -46,7 +45,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## License
 
-Copyright [2019] [YOUR NAME]
+Copyright [2019] [Gabriel Sanchez]
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
