@@ -38,6 +38,9 @@
                                                 <constraint firstItem="sSf-u7-FP3" firstAttribute="top" secondItem="WAE-14-Uc2" secondAttribute="topMargin" id="pjs-7f-lGF"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="photoImageView" destination="sSf-u7-FP3" id="zv4-22-t4H"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

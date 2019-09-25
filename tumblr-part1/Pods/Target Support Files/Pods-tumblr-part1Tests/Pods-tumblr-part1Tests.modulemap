@@ -1,0 +1,6 @@
+framework module Pods_tumblr_part1Tests {
+  umbrella header "Pods-tumblr-part1Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

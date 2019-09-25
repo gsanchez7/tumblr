@@ -17,6 +17,7 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.rowHeight = view.frame.width * 0.75
         
         tumblrAPICall()
         tableView.delegate = self
@@ -67,7 +68,6 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
             cell.photoImageView.af_setImage(withURL: url!)
         }
         
-        cell.textLabel?.text = "This is row \(indexPath.row)"
         return cell
        }
 
