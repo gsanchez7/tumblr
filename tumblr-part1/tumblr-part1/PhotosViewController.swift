@@ -71,14 +71,34 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell
        }
 
-    /*
-    // MARK: - Navigation
+    
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        let post = posts[indexPath.row]
+        
+        if let photos = post["photos"] as? [[String: Any]] {
+
+             let photo = photos[0]
+        
+             let originalSize = photo["original_size"] as! [String: Any]
+          
+             let urlString = originalSize["url"] as! String
+           
+             let url = URL(string: urlString)
+            
+            if let photosDetailViewController = segue.destination as? PhotosDetailViewController{
+                photosDetailViewController.url = url
+            }
+             
+         }
+
+        
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

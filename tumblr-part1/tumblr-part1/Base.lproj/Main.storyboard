@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4QG-Uf-evO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
@@ -40,6 +40,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="photoImageView" destination="sSf-u7-FP3" id="zv4-22-t4H"/>
+                                            <segue destination="gGx-Hr-aZg" kind="show" id="vTA-ly-K9W"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -48,28 +49,62 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="BCA-1g-bec"/>
                     <connections>
                         <outlet property="tableView" destination="WmT-2Y-2x5" id="kBg-yy-V0L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-36.231884057971016" y="142.63392857142856"/>
+            <point key="canvasLocation" x="873.91304347826099" y="142.63392857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Photos Detail View Controller-->
         <scene sceneID="SmS-CB-9Hm">
             <objects>
-                <viewController id="gGx-Hr-aZg" sceneMemberID="viewController">
+                <viewController id="gGx-Hr-aZg" customClass="PhotosDetailViewController" customModule="tumblr_part1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qrm-S8-NqC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B4b-7Z-FSa">
+                                <rect key="frame" x="0.0" y="88" width="414" height="310.5"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="B4b-7Z-FSa" firstAttribute="leading" secondItem="XsR-Gl-KGo" secondAttribute="leading" id="ODf-UT-7Pu"/>
+                            <constraint firstItem="XsR-Gl-KGo" firstAttribute="trailing" secondItem="B4b-7Z-FSa" secondAttribute="trailing" id="PM3-5J-ObT"/>
+                            <constraint firstItem="B4b-7Z-FSa" firstAttribute="height" secondItem="XsR-Gl-KGo" secondAttribute="width" multiplier="3:4" id="clH-oP-shv"/>
+                            <constraint firstItem="B4b-7Z-FSa" firstAttribute="top" secondItem="XsR-Gl-KGo" secondAttribute="top" id="ySg-qq-tjL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="XsR-Gl-KGo"/>
                     </view>
+                    <navigationItem key="navigationItem" id="jlG-OV-8gh"/>
+                    <connections>
+                        <outlet property="photosImageView" destination="B4b-7Z-FSa" id="Bx5-Ns-Cd3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wHC-mF-gT4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="659" y="140"/>
+            <point key="canvasLocation" x="1568.1159420289857" y="139.95535714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Wdk-4d-2aB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4QG-Uf-evO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lEZ-QQ-HGn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SO2-n5-oVe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jjS-Az-5kO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-36.231884057971016" y="142.63392857142856"/>
         </scene>
     </scenes>
 </document>
