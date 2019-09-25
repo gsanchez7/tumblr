@@ -11,7 +11,7 @@
 
 The following **required** user stories are complete:
 
-- [] User can scroll through a feed of images returned from the Tumblr API (5pts)
+- [x] User can scroll through a feed of images returned from the Tumblr API (5pts)
 
 The following **stretch** user stories are implemented:
 
